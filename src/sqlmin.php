@@ -12,8 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $query = $request['query'];
     $db = new PDO('sqlite:' . $database);
     $result = $db->query($query);
-    $response['data'] = $result->fetchAll(PDO::FETCH_ASSOC);
-    $response['status'] = 'success';
+    $response['rows'] = $result->fetchAll(PDO::FETCH_ASSOC);
     die(json_encode($response, JSON_PRETTY_PRINT));
 }
 
