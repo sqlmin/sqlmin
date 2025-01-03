@@ -1,13 +1,13 @@
 <?php
 
-$database = __DIR__ . '/chinook.sqlite';
+$database = __DIR__ . '/../chinook.sqlite';
 
 // Next goes the actual code. Do not modify anything below this line.
 // ==================================================================
 
 $response = array();
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $request = json_decode(file_get_contents('php://input'), true);
     $query = $request['query'];
     $db = new PDO('sqlite:' . $database);
