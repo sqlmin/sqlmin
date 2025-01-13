@@ -1,0 +1,12 @@
+{
+    "name": "sqlmin/sqlmin",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anton Medvedev",
+            "email": "anton@medv.io"
+        }
+    ],
+    "require": {}
+}
